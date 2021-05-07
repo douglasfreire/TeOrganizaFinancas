@@ -1,11 +1,19 @@
+dist: xenial
 language: python
-python: "3.8"
-
-virtualenv:
-  system_site_packages: true
-
+python:
+  - 3.8
+services:
+  - postgresql
 before_install:
-  - python -m pip install --upgrade pip
-
+  - sudo apt-get update
+  - sudo apt-get install libevent-dev daemontools
 install:
-  - pip install -r requirements.txt
+  - pip install -U pip wheel
+  - pip install -r requirements-dev.txt
+before_script:
+  - flake8 djangopeople
+  - flake8 tests
+script:
+  - psql -c 'CREATE DATABASE djangopeople;' -U postgres
+  - python manage.py test
+cache: pip
