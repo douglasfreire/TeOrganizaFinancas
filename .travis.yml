@@ -14,6 +14,6 @@ install:
 #  - flake8 djangopeople
 #  - flake8 tests
 script:
-  - psql -c 'CREATE DATABASE djangopeople;' -U postgres
-  - python manage.py test
+#  - psql -c 'CREATE DATABASE djangopeople;' -U postgres
+  - python manage.py runserver
 cache: pip
