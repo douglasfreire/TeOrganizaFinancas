@@ -10,9 +10,9 @@ before_install:
 install:
   - pip install -U pip wheel
   - pip install -r requirements.txt
-before_script:
-  - flake8 djangopeople
-  - flake8 tests
+#before_script:
+#  - flake8 djangopeople
+#  - flake8 tests
 script:
   - psql -c 'CREATE DATABASE djangopeople;' -U postgres
   - python manage.py test
