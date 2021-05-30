@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'banco',
     'despesas',
     'dashboard',
+    'rendimentos',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
