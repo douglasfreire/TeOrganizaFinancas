@@ -14,3 +14,5 @@ class BanksUsers(models.Model):
     bank_balance = models.BigIntegerField()
     id_user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.id_list_banks, self.bank_balance, self.id_user
