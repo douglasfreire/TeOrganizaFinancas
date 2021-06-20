@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'despesas',
     'dashboard',
     'rendimentos',
+    'historicos',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
